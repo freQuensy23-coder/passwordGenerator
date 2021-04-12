@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Serverless password manager
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form method="post">
+            Site url: <input type=url name="url"> <br>
+            Your username: <input type=text name="username"> <br>
+            Your secret pass: <input type = password name="password"> <br>
+            <input type="submit" value="Generate">
+        </form>
+    </div>
+{% endblock %}
