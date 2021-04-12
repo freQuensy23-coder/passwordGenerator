@@ -3,7 +3,6 @@ from Core import Password_generator
 
 password_generator = Password_generator()
 
-
 app = Flask(__name__)
 app.debug = True
 
@@ -23,7 +22,7 @@ def nonserver_page():
         username = request.form["username"]
         secret_pass = request.form["password"]
         generated_pass = password_generator.generate(user_name=username, secret_pass=secret_pass, url=url, color="")
-        return render_template("generated.html", password = generated_pass) # TODO
+        return render_template("generated.html", password=generated_pass)  # TODO
 
 
 if __name__ == '__main__':
